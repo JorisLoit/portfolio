@@ -76,11 +76,10 @@ export const aboutMe: AboutMeType = {
   title: "A propos",
   description:
     "Je suis Joris LOIT, ingénieur étude et développement depuis plus d'un an," +
-    "diplômé de Polytech Tours dans le cursus Ingénieur informatique depuis 2023." +
+    "diplômé de Polytech Tours dans le cursus Ingénieur informatique depuis 2023. " +
     "Je suis actuellement à la recherche d'une nouvelle aventure pour enrichir ma " +
     "carrière. Diligent et rigoureux grâce aux enseignements de ma CPGE, je suis " +
-    "également sociable et apprécie le travail en équipe.En espérant prendre contact " +
-    "avec vous, je vous souhaite une bonne journée.",
+    "également sociable et apprécie le travail en équipe.",
   info: [
     { fieldName: "Nom", fieldValue: "Joris Loit" },
     { fieldName: "Expérience", fieldValue: "Plus d'un an" },

@@ -1,11 +1,12 @@
 "use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 import ContentResume from "@/components/ContentResume";
-import { experience } from "@/utils/constants";
+import { aboutMe, education, experience, skills } from "@/utils/constants";
 import ScrollAreaEduExp from "@/components/ScrollAreaEduExp";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import SkillsListDisplay from "@/components/SkillsListDisplay";
+import AboutMeSection from "@/components/AboutMeSection";
 const Resume = () => {
   return (
     <motion.div
@@ -22,18 +23,21 @@ const Resume = () => {
             <TabsTrigger value="about">A propos de moi</TabsTrigger>
           </TabsList>
           <div className="min-h-{70vh] w-full">
-            <TabsContent value="experience" className="w-full">
+            <TabsContent value="experience" className="w-full gap-2">
               <ContentResume title={experience.title} description={experience.description} />
               <ScrollAreaEduExp info={experience.info} />
             </TabsContent>
             <TabsContent value="education" className="w-full">
-              education
+              <ContentResume title={education.title} description={education.description} />
+              <ScrollAreaEduExp info={education.info} />
             </TabsContent>
             <TabsContent value="skills" className="w-full">
-              skills
+              <ContentResume title={skills.title} description={skills.description} />
+              <SkillsListDisplay />
             </TabsContent>
-            <TabsContent value="about" className="w-full">
-              about
+            <TabsContent value="about" className="w-full ">
+              <ContentResume title={aboutMe.title} description={aboutMe.description} />
+              <AboutMeSection />
             </TabsContent>
           </div>
         </Tabs>
