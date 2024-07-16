@@ -5,6 +5,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { aboutMe } from "@/utils/constants";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 const info = aboutMe.info;
 const page = () => {
@@ -14,6 +16,15 @@ const page = () => {
   const infoEmail = info.find((value) => {
     return value.fieldName === "Email";
   });
+  const form = useRef<HTMLFormElement>(null);
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (form.current) {
+      emailjs.sendForm("service_jp1as1o", "template_3ekew18", form.current, {
+        publicKey: "sR7CnOqNhkUA4tdtM",
+      });
+    }
+  };
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -25,14 +36,15 @@ const page = () => {
           <div className="xl:h-[54%] order-2 xl:order-none">
             <form
               className="flex flex-col gap-6 p-10 bg-lavender-400 rounded-xl"
-              method="POST"
-              action="sendmail.php"
+              onSubmit={sendEmail}
+              ref={form}
             >
               <h3 className="text-4xl text-accent">Prenons contact</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Prenom" name="firstname" required />
-                <Input type="lastname" placeholder="Nom" name="lastname" required />
-                <Input type="email" placeholder="Adresse mail" name="email" required />
+                <Input type="lastname" placeholder="Nom complet" name="lastname" required />
+                <Input type="firstname" placeholder="Prénom" name="firstname" required />
+                <Input type="email" placeholder="Adresse mail" name="user_email" required />
+                <Input type="society" placeholder="Société" name="society" />
                 <Input type="num" name="num" placeholder="Numéro de téléphone" />
               </div>
               <Textarea
