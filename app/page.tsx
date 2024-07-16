@@ -1,9 +1,14 @@
+"use client";
 import Photo from "@/components/Photo";
 import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import { saveAs } from "file-saver";
 const Home = () => {
+  const saveFile = () => {
+    saveAs("/resume.pdf", "LoitJorisResume.pdf");
+  };
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -19,8 +24,13 @@ const Home = () => {
               solutions à vos problèmes dans une multitude de langages de programmation
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <span>Télécharger CV</span>
+              <Button
+                variant="outline"
+                size="lg"
+                className="uppercase flex items-center gap-2"
+                onClick={saveFile}
+              >
+                <span>Télécharger mon CV</span>
                 <FiDownload />
               </Button>
               <div className="mb-8 xl:mb-0">
