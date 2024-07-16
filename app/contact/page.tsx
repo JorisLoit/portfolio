@@ -7,7 +7,6 @@ import { aboutMe } from "@/utils/constants";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
-import "react-toastify/dist/ReactToastify.css";
 import { useToast } from "@/components/ui/use-toast";
 import { Loader2 } from "lucide-react";
 
