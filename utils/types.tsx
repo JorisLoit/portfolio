@@ -31,3 +31,12 @@ export type SkillsType = {
   description: String;
   skillList: { icon: ReactElement; name: String }[];
 };
+export type ProjectsType = {
+  num: String;
+  category: String;
+  title: String;
+  description: String;
+  stack: { name: String }[];
+  type: String;
+  image:String;
+};
