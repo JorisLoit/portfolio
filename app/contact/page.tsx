@@ -6,23 +6,51 @@ import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { aboutMe } from "@/utils/constants";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { useToast } from "@/components/ui/use-toast";
+import { Loader2 } from "lucide-react";
 
 const info = aboutMe.info;
+const serviceApiKey = process.env.NEXT_PUBLIC_SERVICE_API_KEY_MAIL as string;
+const templateApiKey = process.env.NEXT_PUBLIC_TEMPLATE_API_KEY_MAIL as string;
+const publicKeyMail = process.env.NEXT_PUBLIC_KEY_MAIL as string;
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
   const infoTel = info.find((value) => {
     return value.fieldName === "Téléphone";
   });
   const infoEmail = info.find((value) => {
     return value.fieldName === "Email";
   });
+  console.log(isLoading);
   const form = useRef<HTMLFormElement>(null);
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
     if (form.current) {
-      emailjs.sendForm("service_jp1as1o", "template_3ekew18", form.current, {
-        publicKey: "sR7CnOqNhkUA4tdtM",
-      });
+      emailjs
+        .sendForm(serviceApiKey, templateApiKey, form.current, {
+          publicKey: publicKeyMail,
+        })
+        .then(
+          () => {
+            toast({
+              description: "Le mail a été envoyé.",
+            });
+            if (form.current) {
+              form.current.reset();
+            }
+            setIsLoading(false);
+          },
+          () => {
+            toast({
+              description: "Il y a eu une erreur dans l'envoi du mail.",
+            });
+            setIsLoading(false);
+          }
+        );
     }
   };
   return (
@@ -39,9 +67,9 @@ const Contact = () => {
               onSubmit={sendEmail}
               ref={form}
             >
-              <h3 className="text-4xl text-accent">Prenons contact</h3>
+              <h3 className="text-4xl text-accent">Contactez moi ! </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="lastname" placeholder="Nom complet" name="lastname" required />
+                <Input type="lastname" placeholder="Nom" name="lastname" required />
                 <Input type="firstname" placeholder="Prénom" name="firstname" required />
                 <Input type="email" placeholder="Adresse mail" name="user_email" required />
                 <Input type="society" placeholder="Société" name="society" />
@@ -53,8 +81,20 @@ const Contact = () => {
                 required
                 name="message"
               />
-              <Button size="sm" className="max-w-30 flex align-middle" type="submit">
-                Envoyer
+              <Button
+                size="sm"
+                className="max-w-30 flex align-middle"
+                type="submit"
+                disabled={isLoading}
+              >
+                {isLoading ? (
+                  <>
+                    "<Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    "Veuillez Patienter"
+                  </>
+                ) : (
+                  "Envoyer"
+                )}
               </Button>
             </form>
           </div>

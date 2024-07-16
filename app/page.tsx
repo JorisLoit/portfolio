@@ -15,16 +15,11 @@ const Home = () => {
               <span className="text-accent">Joris Loit</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Particulièrement à l`&aposaise avec l`&aposalgorithmie, je serais apporter
-              des solutions à vos problèmes dans une multitude de langages de
-              programmation
+              Particulièrement à l&apos;aise avec l&apos;algorithmie, je serais apporter des
+              solutions à vos problèmes dans une multitude de langages de programmation
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
+              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
                 <span>Télécharger CV</span>
                 <FiDownload />
               </Button>

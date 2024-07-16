@@ -41,9 +41,9 @@ export const links: LinksType[] = [
 export const socials: SocialIcons[] = [
   {
     icon: <FaGithub />,
-    path: "",
+    path: "https://github.com/JorisLoit",
   },
-  { icon: <FaLinkedinIn />, path: "" },
+  { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/joris-loit-7345071b8/" },
 ];
 export const MAX_STEPS = 6;
 

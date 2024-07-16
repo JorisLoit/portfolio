@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import ContentResume from "@/components/ContentResume";
 import { aboutMe, education, experience, skills } from "@/utils/constants";
 import ScrollAreaEduExp from "@/components/ScrollAreaEduExp";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import SkillsListDisplay from "@/components/SkillsListDisplay";
 import AboutMeSection from "@/components/AboutMeSection";
 const Resume = () => {

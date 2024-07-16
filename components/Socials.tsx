@@ -1,7 +1,5 @@
 import { socials } from "@/utils/constants";
-import { SocialIcons } from "@/utils/types";
 import Link from "next/link";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 type SocialsPropsType = {
   containerStyles: string;
   iconStyles: string;
