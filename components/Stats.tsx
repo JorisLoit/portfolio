@@ -1,25 +1,8 @@
 "use client";
 
+import { stats } from "@/utils/constants";
 import CountUp from "react-countup";
 
-const stats = [
-  {
-    num: 1,
-    text: "Années d'expérience",
-  },
-  {
-    num: 10,
-    text: "Projets finis",
-  },
-  {
-    num: 6,
-    text: "Technologies utilisées",
-  },
-  {
-    num: 1000,
-    text: "Sourires apportés",
-  },
-];
 const Stats = () => {
   return (
     <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">

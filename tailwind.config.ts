@@ -26,6 +26,7 @@ const config = {
     extend: {
       colors: {
         primary: "#957dad",
+        lavender: { "400": "#bfb3d2" },
         visvis: {
           "50": "#fffceb",
           "100": "#fff6c6",

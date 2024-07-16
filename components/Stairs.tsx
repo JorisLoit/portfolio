@@ -1,18 +1,5 @@
+import { MAX_STEPS, stairAnimation } from "@/utils/constants";
 import { motion } from "framer-motion";
-
-const MAX_STEPS = 6;
-
-const stairAnimation = {
-  initial: {
-    top: "0%",
-  },
-  animate: {
-    top: "100%",
-  },
-  exit: {
-    top: ["100%", "0%"],
-  },
-};
 
 const reverseIndex = (index: number) => {
   return MAX_STEPS - index - 1;
