@@ -45,7 +45,7 @@ const config = {
         },
         accent: {
           DEFAULT: "#ffef9f",
-          hover: "#00e187",
+          hover: "#EECEB9",
         },
       },
       keyframes: {

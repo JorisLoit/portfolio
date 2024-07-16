@@ -33,6 +33,10 @@ export const links: LinksType[] = [
     name: "CV",
     path: "/resume",
   },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
 ];
 export const socials: SocialIcons[] = [
   {

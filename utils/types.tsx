@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 type FieldType = {
   fieldName: String;
   fieldValue: String;
+  icon?: ReactElement;
 };
 
 export type SocialIcons = {
@@ -38,5 +39,5 @@ export type ProjectsType = {
   description: String;
   stack: { name: String }[];
   type: String;
-  image:String;
+  image: String;
 };
