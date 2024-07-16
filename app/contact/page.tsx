@@ -23,7 +23,6 @@ const Contact = () => {
   const infoEmail = info.find((value) => {
     return value.fieldName === "Email";
   });
-  console.log(isLoading);
   const form = useRef<HTMLFormElement>(null);
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
