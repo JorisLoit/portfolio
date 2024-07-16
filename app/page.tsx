@@ -15,7 +15,7 @@ const Home = () => {
               <span className="text-accent">Joris Loit</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Particulièrement à l'aise avec l'algorithmie, je serais apporter
+              Particulièrement à l`&aposaise avec l`&aposalgorithmie, je serais apporter
               des solutions à vos problèmes dans une multitude de langages de
               programmation
             </p>

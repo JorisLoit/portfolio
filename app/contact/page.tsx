@@ -9,7 +9,7 @@ import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
 const info = aboutMe.info;
-const page = () => {
+const Contact = () => {
   const infoTel = info.find((value) => {
     return value.fieldName === "Téléphone";
   });
@@ -90,4 +90,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Contact;
