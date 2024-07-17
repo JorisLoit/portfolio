@@ -84,7 +84,10 @@ export const aboutMe: AboutMeType = {
     "diplômé de Polytech Tours dans le cursus Ingénieur informatique depuis 2023. " +
     "Je suis actuellement à la recherche d'une nouvelle aventure pour enrichir ma " +
     "carrière. Diligent et rigoureux grâce aux enseignements de ma CPGE, je suis " +
-    "également sociable et apprécie le travail en équipe.",
+    "également sociable et apprécie le travail en équipe.\n Ce que j'apprécie particulièrement " +
+    "dans le développement c'est la possibilité de résoudre des problèmes concrets grâce à des " +
+    "algorithmes. J'ai cette passion depuis que j'ai découvert l'informatique au lycée. " +
+    "L'approche mathématique est aussi une motivation pour moi, réfléchir et trouver des conjectures est un travail stimulant et intéressant",
   info: [
     { fieldName: "Nom", fieldValue: "Joris Loit" },
     { fieldName: "Expérience", fieldValue: "Plus d'un an" },
