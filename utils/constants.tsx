@@ -123,12 +123,12 @@ export const experience: ExperienceEducationType = {
     "Avec plus d'un an d'expérience j'ai pu découvrir divers outils utilisés universellement tels que Jira, Confluence, Postman/Insomnia. Egalement tous mes projets étaient en équipe.",
   info: [
     {
-      date: "2024-2023",
+      date: "2023-2024",
       title: "Ingénieur étude et développement",
       place: "Attineos",
     },
     {
-      date: "2023-2022",
+      date: "2022-2023",
       title: "Ingénieur étude et développement en Alternance",
       place: "Attineos",
     },
