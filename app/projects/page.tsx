@@ -4,10 +4,6 @@ import React, { useState } from "react";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/utils/constants";
 import WorkSliderButtons from "@/components/WorkSliderButtons";
@@ -26,9 +22,14 @@ const Projects = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="text-8xl leading-none font-extrabold text-white">{project.num}</div>
+            <div className="text-8xl leading-none font-extrabold text-white">
+              {project.num} <span className="text-visvis-200">{project.title}</span>
+            </div>
             <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
               {project.category}
+            </h2>
+            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+              {project.type}
             </h2>
             <h3 className="text-lavender-400">{project.description}</h3>
             <ul className="flex gap-4">

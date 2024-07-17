@@ -105,12 +105,12 @@ export const education: ExperienceEducationType = {
       place: "Polytech Tours",
     },
     {
-      date: "2020 - 2018",
+      date: "2018 - 2020",
       title: "Classe prépartoire aux grandes écoles TSI",
       place: "Lycée Marcel Sembat Sotteville-lès-Rouen",
     },
     {
-      date: "2018 - 2015",
+      date: "2015 - 2018",
       title: "Baccalauréat STI2D SIN",
       place: "Lycée Blaise Pascal Rouen",
     },
@@ -123,12 +123,12 @@ export const experience: ExperienceEducationType = {
     "Avec plus d'un an d'expérience j'ai pu découvrir divers outils utilisés universellement tels que Jira, Confluence, Postman/Insomnia. Egalement tous mes projets étaient en équipe.",
   info: [
     {
-      date: "2023-2024",
+      date: "2024-2023",
       title: "Ingénieur étude et développement",
       place: "Attineos",
     },
     {
-      date: "2022-2023",
+      date: "2023-2022",
       title: "Ingénieur étude et développement en Alternance",
       place: "Attineos",
     },
@@ -210,13 +210,23 @@ export const projects: ProjectsType[] = [
     description:
       "Projet interne à Attineos, permet à l'équipe commerciale de récupérer les CV des collaborateur et démarcher les clients. Un existant était présent le but était de le migrer vers des technologies plus récentes en faisant une refonte graphique. Dans un premier temps sur de la formation de 3 stagiaires, j'ai ensuite rejoint l'équipe afin de prêter une main forte technique et de remettre de l'ordre dans le répertoire et les bonnes pratiques.  ",
     stack: [{ name: "ReactJs" }, { name: "PHP/Symfony" }, { name: "TypeScript" }],
-    type: "Profesionnelle",
+    type: "Professionnel",
     image: "/extranet.jpg",
   },
   {
     num: "04",
+    category: "Front-end",
+    title: "Portfolio",
+    description:
+      "Le site sur lequel vous vous trouvez actuellement ! C'est le moment de faire tourner la toupie",
+    stack: [{ name: "ReactJs" }, { name: "NextJs" }, { name: "Tailwind" }],
+    type: "Personel",
+    image: "/portfolio.jpg",
+  },
+  {
+    num: "05",
     category: "Fullstack",
-    title: "Application web type Pronote",
+    title: "Faux Pronote",
     description:
       "Lors de mon Erasmus en Pologne, j'ai effectué ce projet dans le cadre de ma formation en tant qu'introduction à SpringBoot et AngularJs",
     stack: [{ name: "Java/SpringBoot" }, { name: "AngularJs" }],
@@ -224,9 +234,9 @@ export const projects: ProjectsType[] = [
     image: "/pronote.jpg",
   },
   {
-    num: "05",
+    num: "06",
     category: "Logiciel",
-    title: "IHM de simulation de bibliothèque",
+    title: "IHM bibliothèque",
     description:
       "Lors de mon Erasmus en Pologne, j'ai effectué ce projet dans le cadre de ma formation en tant qu'introduction au C#",
     stack: [{ name: "C#" }],
@@ -234,3 +244,4 @@ export const projects: ProjectsType[] = [
     image: "/bibliotheque.jpg",
   },
 ];
+export const screenSizeConfig: { [key: string]: number } = { sm: 640, md: 768, lg: 960, xl: 1200 };
