@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={leagueSpartan.className}>
         <Header />
         <StairTransition />
-        <PageTransition>{children}</PageTransition>*
+        <PageTransition>{children}</PageTransition>
         <Toaster />
       </body>
     </html>
