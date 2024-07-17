@@ -20,7 +20,7 @@ const Home = () => {
               <span className="text-accent">Joris Loit</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Particulièrement à l&apos;aise avec l&apos;algorithmie, je serais apporter des
+              Particulièrement à l&apos;aise avec l&apos;algorithmie, je saurais apporter des
               solutions à vos problèmes dans une multitude de langages de programmation
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -30,7 +30,7 @@ const Home = () => {
                 className="uppercase flex items-center gap-2"
                 onClick={saveFile}
               >
-                <span>Télécharger mon CV</span>
+                <span>Téléchargez mon CV</span>
                 <FiDownload />
               </Button>
               <div className="mb-8 xl:mb-0">
