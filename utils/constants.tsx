@@ -236,7 +236,7 @@ export const projects: ProjectsType[] = [
   {
     num: "06",
     category: "Logiciel",
-    title: "IHM bibliothèque",
+    title: "IHM librarie",
     description:
       "Lors de mon Erasmus en Pologne, j'ai effectué ce projet dans le cadre de ma formation en tant qu'introduction au C#",
     stack: [{ name: "C#" }],
