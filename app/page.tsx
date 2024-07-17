@@ -17,7 +17,7 @@ const Home = () => {
             <span className="text-xl">Ingénieur étude et développement</span>
             <h1 className="h1">
               Bonjour je suis <br />
-              <span className="text-accent text-9xl">J</span>
+              <span className="text-accent">Joris Loit</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               Particulièrement à l&apos;aise avec l&apos;algorithmie, je saurais apporter des
