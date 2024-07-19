@@ -68,7 +68,7 @@ export const stats: StatsType[] = [
     text: "Projets finis",
   },
   {
-    num: 6,
+    num: 10,
     text: "Technologies utilisées",
   },
   {
