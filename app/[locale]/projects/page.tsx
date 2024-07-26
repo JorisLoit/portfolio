@@ -25,7 +25,7 @@ const Projects = () => {
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="text-8xl leading-none font-extrabold text-white">
-              {project.num}{" "}
+              {project.num}
               <span className="text-visvis-200 text-6xl">{project.title[locale]}</span>
             </div>
             <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
