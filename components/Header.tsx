@@ -41,7 +41,15 @@ const Header = () => {
           </div>
         </div>
         <div className="xl:hidden">
-          <MobileNav />
+          <div className="flex items-center gap-2">
+            <span className="text-accent">FR</span>
+            <Switch
+              defaultChecked={locale === "en"}
+              onCheckedChange={(checked) => handleChangeChecked(checked)}
+            />
+            <span className="text-accent">EN</span>
+            <MobileNav />
+          </div>
         </div>
       </div>
     </header>
