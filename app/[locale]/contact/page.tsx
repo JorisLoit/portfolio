@@ -9,6 +9,7 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { Loader2 } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 
 const info = aboutMe.info;
 const serviceApiKey = process.env.NEXT_PUBLIC_SERVICE_API_KEY_MAIL as string;
@@ -18,11 +19,13 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
   const infoTel = info.find((value) => {
-    return value.fieldName === "Téléphone";
+    return value.fieldName.fr === "Téléphone";
   });
   const infoEmail = info.find((value) => {
-    return value.fieldName === "Email";
+    return value.fieldName.fr === "Email";
   });
+  const t = useTranslations("Contact");
+  const locale = useLocale();
   const form = useRef<HTMLFormElement>(null);
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,7 +38,7 @@ const Contact = () => {
         .then(
           () => {
             toast({
-              description: "Le mail a été envoyé.",
+              description: t("toastSuccessMessage"),
             });
             if (form.current) {
               form.current.reset();
@@ -44,7 +47,7 @@ const Contact = () => {
           },
           () => {
             toast({
-              description: "Il y a eu une erreur dans l'envoi du mail.",
+              description: t("toastErrorMessage"),
             });
             setIsLoading(false);
           }
@@ -65,17 +68,22 @@ const Contact = () => {
               onSubmit={sendEmail}
               ref={form}
             >
-              <h3 className="text-4xl text-accent">Contactez moi ! </h3>
+              <h3 className="text-4xl text-accent">{t("title")}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="lastname" placeholder="Nom" name="lastname" required />
-                <Input type="firstname" placeholder="Prénom" name="firstname" required />
-                <Input type="email" placeholder="Adresse mail" name="user_email" required />
-                <Input type="society" placeholder="Société" name="society" />
-                <Input type="num" name="num" placeholder="Numéro de téléphone" />
+                <Input type="lastname" placeholder={t("formLastName")} name="lastname" required />
+                <Input
+                  type="firstname"
+                  placeholder={t("formFirstName")}
+                  name="firstname"
+                  required
+                />
+                <Input type="email" placeholder={t("formEmail")} name="user_email" required />
+                <Input type="society" placeholder={t("formCompany")} name="society" />
+                <Input type="num" name="num" placeholder={t("formPhone")} />
               </div>
               <Textarea
                 className="h-[200px]"
-                placeholder="Ecrivez votre message"
+                placeholder={t("formMessage")}
                 required
                 name="message"
               />
@@ -87,11 +95,11 @@ const Contact = () => {
               >
                 {isLoading ? (
                   <>
-                    "<Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    "Veuillez Patienter"
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    {t("loadingMessage")}
                   </>
                 ) : (
-                  "Envoyer"
+                  t("send")
                 )}
               </Button>
             </form>
@@ -105,8 +113,8 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <p className="text-visvis-200">{infoEmail?.fieldName}</p>
-                  <h3 className="text-xl">{infoEmail?.fieldValue}</h3>
+                  <p className="text-visvis-200">{infoEmail?.fieldName[locale]}</p>
+                  <h3 className="text-xl">{infoEmail?.fieldValue[locale]}</h3>
                 </div>
               </li>
               <li className="flex items-center gap-6">
@@ -116,8 +124,8 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <p className="text-visvis-200">{infoTel?.fieldName}</p>
-                  <h3 className="text-xl">{infoTel?.fieldValue}</h3>
+                  <p className="text-visvis-200">{infoTel?.fieldName[locale]}</p>
+                  <h3 className="text-xl">{infoTel?.fieldValue[locale]}</h3>
                 </div>
               </li>
             </ul>

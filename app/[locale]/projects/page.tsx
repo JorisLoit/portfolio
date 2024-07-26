@@ -7,12 +7,14 @@ import "swiper/css";
 import Image from "next/image";
 import { projects } from "@/utils/constants";
 import WorkSliderButtons from "@/components/WorkSliderButtons";
+import { useLocale } from "next-intl";
 const Projects = () => {
   const [project, setProject] = useState(projects[0]);
   const handleSlideChange = (swiper: SwiperClass) => {
     const currentIndex = swiper.activeIndex;
     setProject(projects[currentIndex]);
   };
+  const locale = useLocale();
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -23,15 +25,16 @@ const Projects = () => {
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="text-8xl leading-none font-extrabold text-white">
-              {project.num} <span className="text-visvis-200 text-6xl">{project.title}</span>
+              {project.num}
+              <span className="text-visvis-200 text-6xl">{project.title[locale]}</span>
             </div>
             <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-              {project.category}
+              {project.category[locale]}
             </h2>
             <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-              {project.type}
+              {project.type[locale]}
             </h2>
-            <h3 className="text-lavender-400">{project.description}</h3>
+            <h3 className="text-lavender-400">{project.description[locale]}</h3>
             <ul className="flex gap-4">
               {project.stack.map((item, index) => {
                 return (
