@@ -1,0 +1,30 @@
+{
+  "Contact": {
+    "title": "Contactez moi ! ",
+    "formLastName": "Nom",
+    "formFirstName": "Prénom",
+    "formEmail": "Email",
+    "formCompany": "Société",
+    "formPhone": "Téléphone",
+    "formMessage": "Ecrivez votre message",
+    "loadingMessage": "Veuillez patienter",
+    "send": "Envoyer",
+    "toastSuccessMessage": "Le mail a été envoyé.",
+    "toastErrorMessage": "Il y a eu une erreur dans l'envoi du mail."
+  },
+  "Resume": {
+    "experience": "Expérience professionnelle",
+    "education:": "Formations",
+    "skills": "Compétences",
+    "about": "A propos de moi"
+  },
+  "HomePage": {
+    "jobDescription": "Ingénieur étude et développement",
+    "hello": "Bonjour je suis",
+    "introAboutMe": "Particulièrement à l'aise avec l'algorithmie, je saurais apporter des solutions à vos problèmes dans une multitude de langages de programmation",
+    "dlResume": "Téléchargez mon CV"
+  },
+  "Header": {
+    "contactMe": "Contactez moi !"
+  }
+}

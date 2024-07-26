@@ -1,0 +1,30 @@
+{
+  "Contact": {
+    "title": "Contact me ! ",
+    "formLastName": "Lastname",
+    "formFirstName": "Firstname",
+    "formEmail": "Email",
+    "formCompany": "Comapany",
+    "formPhone": "Phone number",
+    "formMessage": "Please write your message",
+    "loadingMessage": "Please wait",
+    "send": "Envoyer",
+    "toastSuccessMessage": "Mail succesfully sent",
+    "toastErrorMessage": "Something went wrong, try again"
+  },
+  "Resume": {
+    "experience": "Work experience",
+    "education": "Education",
+    "skills": "Skills",
+    "about": "About me"
+  },
+  "HomePage": {
+    "jobDescription": "Computer Science Engineer",
+    "hello": "Hello I am",
+    "introAboutMe": "Particularly at ease with algorithm, I will be able to bring you solutions to your problems using a plethera of programming languages",
+    "dlResume": "Download my resume"
+  },
+  "Header": {
+    "contactMe": "Contact me !"
+  }
+}

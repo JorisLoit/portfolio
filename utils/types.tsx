@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 type FieldType = {
-  fieldName: String;
-  fieldValue: String;
+  fieldName: { [key: string]: string };
+  fieldValue: { [key: string]: string };
   icon?: ReactElement;
 };
 
@@ -10,34 +10,34 @@ export type SocialIcons = {
   path: String;
 };
 export type LinksType = {
-  name: String;
+  name: { [key: string]: String };
   path: String;
 };
 export type StatsType = {
   num: number;
-  text: String;
+  text: { [key: string]: string };
 };
 export type AboutMeType = {
-  title: String;
-  description: String;
+  title: { [key: string]: string };
+  description: { [key: string]: string };
   info: FieldType[];
 };
 export type ExperienceEducationType = {
-  title: String;
-  description: String;
-  info: { date: String; title: String; place: String }[];
+  title: { [key: string]: string };
+  description: { [key: string]: string };
+  info: { date: String; title: { [key: string]: string }; place: { [key: string]: string } }[];
 };
 export type SkillsType = {
-  title: String;
-  description: String;
+  title: { [key: string]: string };
+  description: { [key: string]: string };
   skillList: { icon: ReactElement; name: String }[];
 };
 export type ProjectsType = {
   num: String;
-  category: String;
-  title: String;
-  description: String;
+  category: { [key: string]: string };
+  title: { [key: string]: string };
+  description: { [key: string]: string };
   stack: { name: String }[];
-  type: String;
+  type: { [key: string]: string };
   image: String;
 };

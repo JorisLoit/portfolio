@@ -1,7 +1,7 @@
 import React from "react";
 
 type ContentResumePropsType = {
-  title: String;
+  title: string;
   description: String;
 };
 
